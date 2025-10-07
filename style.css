@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hashtags {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.hashtag {
+    color: #FFD700;
+    margin: 0 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.main-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.section {
+    margin: 2rem 0;
+}
+
+.section h2 {
+    color: #4a5568;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.content-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.content-card {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+.content-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.resource-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.resource-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+}
+
+.resource-card h3 {
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.resource-card p {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.resource-link {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.resource-link:hover {
+    background: #5a67d8;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.about-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.goal {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+}
+
+.tagline-container {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.tagline-container .tagline {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.collapsible {
+    background-color: #667eea;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.collapsible:hover {
+    background-color: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.collapsible:after {
+    content: '+';
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.collapsible.active:after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.collapsible.active {
+    background-color: #5a67d8;
+}
+
+.collapsible-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 10px 10px;
+}
+
+.collapsible-content.active {
+    padding: 20px 0;
+    max-height: 2000px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .main-content {
+        padding: 1.5rem;
+    }
+    
+    .hashtags {
+        font-size: 1rem;
+    }
+    
+    .hashtag {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* --- New Card Color Variables (Matching Screenshot Vibe) --- */
+:root {
+    /* Existing colors... */
+    --primary-color: #007bff;
+    --secondary-color: #343a40; 
+    --background-light: #f8f9fa;
+    --background-dark: #212529;
+    --text-light: #ffffff;
+    
+    /* NEW CARD COLORS */
+    --tech-gradient: linear-gradient(135deg, #FF6B6B 0%, #FF2E63 100%); /* Red/Pink for Tech */
+    --food-gradient: linear-gradient(135deg, #FF9A8B 0%, #FF686B 100%); /* Orange/Pink for Food */
+    --learning-gradient: linear-gradient(135deg, #9C88FF 0%, #686DE0 100%); /* Blue/Purple for Learning */
+    --resource-color: #5352ED; /* Solid Blue for the button */
+}
+
+/* --- Content Hub Styling (Reviews Page) --- */
+#review-hub {
+    text-align: center;
+    background-color: transparent; /* Ensures the main background shows */
+    box-shadow: none;
+}
+
+.card-grid {
+    display: flex;
+    flex-direction: column; /* Stacks cards vertically by default */
+    gap: 20px;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.content-card {
+    color: var(--text-light);
+    padding: 25px;
+    border-radius: 12px;
+    min-height: 150px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light); /* Ensure title is white */
+}
+
+/* Specific Card Styling */
+.card-tech {
+    background: var(--tech-gradient);
+}
+.card-food {
+    background: var(--food-gradient);
+}
+.card-learning {
+    background: var(--learning-gradient);
+}
+
+/* Links inside the normal content cards (Read More/Explore) */
+.content-card .card-link {
+    display: inline-block;
+    color: var(--text-light); /* White link color */
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* --- Special Styling for the Resource Button Card --- */
+.card-button-link {
+    text-decoration: none; /* Remove underline from the outer link */
+    display: block; /* Make the whole card clickable */
+}
+
+.card-resource-link {
+    background-color: var(--resource-color); /* Solid blue/purple */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+
+.card-resource-link:hover .icon-indicator {
+    background-color: var(--primary-color);
+}
+
+.icon-indicator {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--text-light);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 26px; /* Center the + sign */
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Mobile Responsiveness for Cards */
+@media (min-width: 768px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+        gap: 30px;
+    }
+    
+    /* Make the resource button span the width on desktop */
+    .card-button-link {
+        grid-column: 1 / -1; 
+    }
+}
