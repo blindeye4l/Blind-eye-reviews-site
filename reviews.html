@@ -56,18 +56,70 @@
             </div>
         </section>
 
+        <section class="section">
+            <button class="collapsible" id="contact-header" aria-expanded="false" aria-controls="contact-content">Direct Contact & Social</button>
+            <div class="collapsible-content" id="contact-content" aria-labelledby="contact-header" aria-hidden="true">
+                <div id="direct-contact" style="padding: 20px;">
+                    <p style="font-style: italic; font-weight: bold; color: var(--accent-color); margin-bottom: 20px;">
+                        **The Vision:** Blind man living life to its fullest one scar at a time
+                    </p>
+                    
+                    <div class="contact-info">
+                        <p>
+                            <strong>Email:</strong> <a href="mailto:blindeyereviews@gmail.com">blindeyereviews@gmail.com</a>
+                        </p>
+                        <p>
+                            <strong>YouTube:</strong> <a href="https://youtube.com/@blindeyemitchie" target="_blank">Blind Eye Reviews Channel</a>
+                        </p>
+                        <p>
+                            <strong>X (Twitter):</strong> <a href="https://x.com/blindeyereviews" target="_blank">@blindeyereviews</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="https://www.youtube.com/blindeyereviews" target="_blank" aria-label="YouTube Channel">YouTube</a>
-            <a href="https://x.com/blindeyereviews" target="_blank" aria-label="X / Formerly Twitter">X (Twitter)</a>
-            <a href="mailto:your_email@gmail.com" aria-label="Email Address">Email (Gmail)</a>
+            <a href="https://youtube.com/@blindeyemitchie" target="_blank" aria-label="YouTube Channel: @blindeyemitchie">YouTube</a>
+            <a href="https://x.com/blindeyereviews" target="_blank" aria-label="X / Formerly Twitter: @blindeyereviews">X (Twitter)</a>
+            <a href="mailto:blindeyereviews@gmail.com" aria-label="Email Address: blindeyereviews@gmail.com">Email (Gmail)</a>
         </div>
         
-        <p>© 2025 Blind Eye Reviews. All rights reserved.</p>
-        <p><a href="#review-hub">Back to Top</a> | <a href="privacy.html">Privacy Policy</a></p>
+        <p>&copy; 2025 Blind Eye Reviews. All rights reserved.</p>
+        <p><a href="#hero">Back to Top</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+            var collapsibles = document.getElementsByClassName('collapsible');
+            
+            for (let i = 0; i < collapsibles.length; i++) {
+                collapsibles[i].addEventListener('click', function() {
+                    // 1. Toggle the visual class for CSS transition
+                    this.classList.toggle('active');
+
+                    var content = this.nextElementSibling;
+                    
+                    // 2. Toggle the visual max-height for collapse/expand
+                    content.classList.toggle('active');
+
+                    // --- ACCESSIBILITY FIX START ---
+                    
+                    // 3. Toggle the aria-expanded state for the button
+                    var isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+                    this.setAttribute('aria-expanded', !isExpanded);
+
+                    // 4. Toggle the aria-hidden state for the content (THE CRITICAL FIX)
+                    content.setAttribute('aria-hidden', isExpanded);
+
+                    // --- ACCESSIBILITY FIX END ---
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
