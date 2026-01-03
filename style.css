@@ -150,6 +150,41 @@ footer {
     margin-top: 2rem;
 }
 
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    background-color: white;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .about-section {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
